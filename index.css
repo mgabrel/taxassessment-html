@@ -1,0 +1,33 @@
+.pin-input {
+  width: 90px;
+}
+
+.sketch {
+  width: 50%;
+}
+
+#assessments-table {
+  font-size: 11pt;
+}
+
+.comparable {
+  float: left;
+  text-align: left;
+}
+
+.adjustment {
+  float: right;
+  text-align: right;
+  font-weight: bold;
+}
+
+@media print {    
+  .no-print, .no-print * {
+    display: none !important;
+  }
+  table { page-break-after:auto }
+  tr    { page-break-inside:avoid; page-break-after:auto }
+  td    { page-break-inside:avoid; page-break-after:auto }
+  thead { display:table-header-group }
+  tfoot { display:table-footer-group }
+} 

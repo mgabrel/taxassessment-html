@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ComparablePropertyTax</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+
+    <div id="loading" style="display:none;">
+      <h3>Loading Please Wait....</h3>
+    </div>
+
+    <div id="error" style="display:none;">
+      <h3>Error processing request. Make sure your inputs are correct</h3>
+    </div>
+
+    <br />
+
+    <table border="1" id="assessments-table"> 
+      <thead>
+        <tr>
+          <th></th>
+          <th>Subject</th>
+          <th>Comp #1</th>
+          <th>Comp #2</th>
+          <th>Comp #3</th>
+        </tr>
+      </thead>
+    </table>
+
+    <div id='sketches'></div>
+
+    <br />
+
+    <label class="no-print" for="subjectPin">Subject PIN</label>
+    <input type="number" id="subjectPin" name="subjectPin" class="pin-input no-print" value="">
+    <label class="no-print" for="comparable1Pin">Comp #1 PIN</label>
+    <input type="number" id="comparable1Pin" name="comparable1Pin" class="pin-input no-print" value="">
+    <label class="no-print" for="comparable2Pin">Comp #2 PIN</label>
+    <input type="number" id="comparable2Pin" name="comparable2Pin" class="pin-input no-print" value="">
+    <label class="no-print" for="comparable3Pin">Comp #3 PIN</label>
+    <input type="number" id="comparable3Pin" name="comparable3Pin" class="pin-input no-print" value="">
+
+    <br /><br />
+
+    <label class="no-print" for="sqftValueOverride"><strong>SQFT Value override</strong></span>
+    <select id="sqftValueOverride" name="sqftValueOverride" class="no-print">
+      <option value="">Default</option>
+      <option value="50">$50</option>
+      <option value="60">$60</option>
+      <option value="65">$65</option>
+      <option value="70">$70</option>
+      <option value="80">$80</option>
+      <option value="90">$90</option>
+    </select>
+    <p class="no-print"><strong>Last Sale Amount override</strong></p>
+    <label class="no-print" for="Subject_Last_Sale_Amount">Subject last sale amount</label>
+    <input class="no-print" id="subjectlastsaleamount" name="subjectlastsaleamount" type="number"><br>
+    <label class="no-print" for="Comp_1_Last_Sale_Amount">Comp 1 last sale amount</label>
+    <input class="no-print" id="cmp1lastsaleamount" name="cmp1lastsaleamount" type="number"><br>
+    <label class="no-print" for="Comp_2_Last_Sale_Amount">Comp 2 last sale amount</label>
+    <input class="no-print" id="cmp2lastsaleamount" name="cmp2lastsaleamount" type="number"><br>
+    <label class="no-print" for="Comp_3_Last_Sale_Amount">Comp 3 last sale amount</label>
+    <input class="no-print" id="cmp3lastsaleamount" name="cmp3lastsaleamount" type="number"><br>
+    <p class="no-print"><strong>Date of Sale override</strong></p>
+    <label class="no-print" for="Subject_Date_of_Sale">Subject date of sale</label>
+    <input class="no-print" id="subjectdate" name="subjectdate" type="text"><br>
+    <label class="no-print" for="Comp_1_Date_of_Sale">Comp 1 date of sale</label>
+    <input class="no-print" id="cmp1date" name="cmp1date" type="text"><br>
+    <label class="no-print" for="Comp_2_Date_of_Sale">Comp 2 date of sale</label>
+    <input class="no-print" id="cmp2date" name="cmp2date" type="text"><br>
+    <label class="no-print" for="Comp_3_Date_of_Sale">Comp 3 date of sale</label>
+    <input class="no-print" id="cmp3date" name="cmp3date" type="text"><br>
+
+    <button class="no-print" id='ajaxButton' type="button">
+      Submit
+    </button>
+
+  </body>
+</html>
